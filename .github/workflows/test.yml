@@ -1,0 +1,15 @@
+cat <<EOF > .github/workflows/test.yml
+name: My First Action
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print message
+        run: echo "Hello from GitHub Actions!"
+EOF
